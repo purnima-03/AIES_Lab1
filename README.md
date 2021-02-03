@@ -1,1 +1,27 @@
-# AIES_Lab1
+This is a test read me.
+
+:wn
+
+weesdvdfvmm
+exit
+:exit
+:vin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:vin
+:wn
+:wq
+
