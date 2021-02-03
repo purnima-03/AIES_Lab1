@@ -1,0 +1,56 @@
+pyadavList = [] #main list to store the entered integers
+
+#Enter a carriage value to end input of numbers
+def pyadavEndInput():
+    str = input("\nEnter 'done' to end:")
+    if str == 'done':
+        print("You're done!")
+    else:
+        pyadavAddIntegers()
+    return 0
+    
+#Get sequence of numbers
+def pyadavAddIntegers():
+    while True:
+        try:
+            pyadavNum = int(input("\nEnter an integer:"))
+            pyadavList.append(pyadavNum)
+            print("\nYour list of numbers is :", pyadavList)
+            pyadavEndInput()
+        except ValueError:
+            print("\nInvalid Input. Please enter integer.")
+            continue
+        else:
+                break
+    return 0
+
+#Add numbers in the list
+def pyadavAddNumbers(nList):
+    global pyadavSum
+    pyadavSum = 0
+    for i in nList:
+        pyadavSum += i
+    return pyadavSum
+
+#Calculate average of the numbers
+def pyadavAverage(aList):
+    pyadavAvg = pyadavSum/len(aList)
+    return pyadavAvg
+
+
+# Main Program
+def pyadavMyFunc():
+    print("Enter 'done' to end.")
+    pyadavAddIntegers()
+    pyadavLength = len(pyadavList)
+    print("\n")
+    print("*******************")
+    print("You entered "+ str(pyadavLength) + " integers.")
+    pyadavS = pyadavAddNumbers(pyadavList)
+    print("Sum of integers is : ",pyadavS)
+    pyadavA = pyadavAverage(pyadavList)
+    print("Average of integers is : ",pyadavA)
+
+
+pyadavMyFunc()
+
